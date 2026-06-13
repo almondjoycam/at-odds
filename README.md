@@ -1,2 +1,34 @@
 # at-odds
 District Jam VII game
+
+- Theme: From Above
+- Brainstorm
+	- From the sky (weather)
+	- ==Literally top down perspective==
+	- ==Divine smite / intervention==
+	- +Casino: both looking from above (poker) and gods helping you win the game??
+	- Corporate peon
+	- Roll dice to get money and upgrade dice with a skill tree
+	- ==You are the god== and you control people's odds based on life stats
+	- 5 poker players + a dealer and you decide how much they bet and if they cheat? Too much story writing?
+	- You are from above (god) but eventually the power is taken from you
+	- dodging objects from above (or throwing objects from above)
+	- dice rolling / ==poker==
+- Building faith through cheating: gain power as the Casino Spirit by manipulating the odds and gaining believers
+	- you recently died to a former Casino Spirit ~~(do you gain back memories as you gain power?)~~
+	- you are confined to the table at which you died
+	- stat is belief (number of believers / strength of belief)
+	- incremental: amount of belief directly impacts amount of manipulative power
+	- poker: dealer + 4
+	- win condition: the whole table believes in you
+	- lose condition: time limit runs out? you dissipate because nobody believes? THE DEALER FINDS OUT
+- abilities to unlock:
+	- low: you can choose what card a player can receive in their hand, but restricted to low ranks, and you can only choose cards that give them a mid hand
+	- choose higher ranks at 10%
+	- start choosing community cards at 25%
+	- better deck options unlocked at 50%
+- bad decisions that get the dealer to find out
+	- choose a card that's already been played
+	- always letting the same person win
+- what is the time period and location (setting)
+	- present day normal casino
