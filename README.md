@@ -22,7 +22,7 @@ District Jam VII game
 	- poker: dealer + 4
 	- win condition: the whole table believes in you
 	- lose condition: time limit runs out? you dissipate because nobody believes? THE DEALER FINDS OUT
-- abilities to unlock:
+- upgrades to unlock:
 	- low: you can choose what card a player can receive in their hand, but restricted to low ranks, and you can only choose cards that give them a mid hand
 	- choose higher ranks at 10%
 	- start choosing community cards at 25%
@@ -32,3 +32,7 @@ District Jam VII game
 	- always letting the same person win
 - what is the time period and location (setting)
 	- present day normal casino
+abilities to unlock:
+	- distract: you can distract the dealer for 3 seconds at 10%, 1 per game
+	- golden rake: you magically triple the amount of money that a certain person wins but you must pick who before you see the cards, so you are gambling, one every 3 games unlocked at 25%
+	- divine intervention: you put one player in a trance for the whole game and force them to go all in, you can still manipulate cards here, one every 5 games unlocked at 50%
