@@ -32,7 +32,7 @@ District Jam VII game
 	- always letting the same person win
 - what is the time period and location (setting)
 	- present day normal casino
-abilities to unlock:
+- abilities to unlock:
 	- distract: you can distract the dealer for 3 seconds at 10%, 1 per game
 	- golden rake: you magically triple the amount of money that a certain person wins but you must pick who before you see the cards, so you are gambling, one every 3 games unlocked at 25%
 	- divine intervention: you put one player in a trance for the whole game and force them to go all in, you can still manipulate cards here, one every 5 games unlocked at 50%
