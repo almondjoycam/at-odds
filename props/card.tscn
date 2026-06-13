@@ -1,20 +1,18 @@
 [gd_scene format=3 uid="uid://b3rcesmdqq163"]
 
 [ext_resource type="Script" uid="uid://b4x6nw81p2t24" path="res://poker/card.gd" id="1_xoatd"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_xoatd"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ebwaa"]
-albedo_texture = SubResource("PlaceholderTexture2D_xoatd")
+[ext_resource type="Texture2D" uid="uid://csusakl5t0ail" path="res://poker/cards/card_back.png" id="2_ebwaa"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_ebwaa"]
 resource_local_to_scene = true
-material = SubResource("StandardMaterial3D_ebwaa")
-size = Vector2(0.2, 0.3)
+size = Vector2(0.3, 0.5)
 orientation = 1
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xoatd"]
+albedo_texture = ExtResource("2_ebwaa")
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_omfbd"]
-size = Vector3(0.2, 0.01, 0.3)
+size = Vector3(0.3, 0.01, 0.5)
 
 [node name="Card" type="RigidBody3D" unique_id=1749647191]
 axis_lock_angular_x = true
@@ -28,6 +26,7 @@ script = ExtResource("1_xoatd")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1593239803]
 mesh = SubResource("QuadMesh_ebwaa")
+surface_material_override/0 = SubResource("StandardMaterial3D_xoatd")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=809488999]
 shape = SubResource("BoxShape3D_omfbd")

@@ -8,8 +8,10 @@ var deck: Array[Card]
 
 @onready var players: Array[Node] = get_tree().get_nodes_in_group("NPC")
 
+
 func _ready() -> void:
 	shuffle()
+	deal(2)
 
 func shuffle() -> void:
 	for s in suits:
@@ -17,13 +19,17 @@ func shuffle() -> void:
 			var card: Card = card_packed.instantiate() as Card
 			card.suit = s
 			card.rank = r
+			#card.tex = material.texture_from_card_data(s, r)
 			deck.append(card)
 	assert(len(deck) == 52, "deck machine broke")
 	deck.shuffle()
-	for i in range(len(deck)):
-		add_child(deck[i])
-		var timer = get_tree().create_timer(0.2)
-		var card_deal: Vector3 = players[i % 4].global_position - global_position
-		card_deal += Vector3.UP
-		deck[i].apply_central_force(card_deal * randf_range(7, 8))
-		await timer.timeout
+
+func deal(num_per_player: int) -> void:
+	for player in players:
+		for i in range(num_per_player):
+			add_child(deck[i])
+			var timer = get_tree().create_timer(0.2)
+			var card_deal: Vector3 = player.global_position - global_position
+			card_deal += Vector3.UP
+			deck[i].apply_central_force(card_deal * randf_range(7, 8))
+			await timer.timeout

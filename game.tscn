@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bwl63tnhbfvnd" path="res://props/chair.tscn" id="2_fc0e3"]
 [ext_resource type="PackedScene" uid="uid://dwjtabu4u2kvo" path="res://props/npc.tscn" id="3_7jktm"]
 [ext_resource type="Script" uid="uid://bstu4mwerqkf7" path="res://player/player.gd" id="4_fc0e3"]
+[ext_resource type="Resource" uid="uid://vn3bn1xhrhp7" path="res://poker/card_default.tres" id="6_eow3j"]
 [ext_resource type="Script" uid="uid://s013qi4osxtq" path="res://poker/deck.gd" id="6_ryrav"]
 
 [sub_resource type="Environment" id="Environment_ryrav"]
@@ -58,3 +59,4 @@ transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 5
 [node name="Deck" type="Node3D" parent="." unique_id=1276455260]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 script = ExtResource("6_ryrav")
+material = ExtResource("6_eow3j")
