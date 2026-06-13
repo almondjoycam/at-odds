@@ -1,0 +1,36 @@
+[gd_resource type="Theme" format=3 uid="uid://u5a6w1fswmu2"]
+
+[ext_resource type="FontFile" uid="uid://doroy8n8evmwy" path="res://ui/IosevkaEtoile-Regular.ttc" id="1_0sx86"]
+
+[resource]
+default_font = ExtResource("1_0sx86")
+default_font_size = 24
+Button/fonts/font = ExtResource("1_0sx86")
+CheckBox/fonts/font = ExtResource("1_0sx86")
+CheckButton/fonts/font = ExtResource("1_0sx86")
+CodeEdit/fonts/font = ExtResource("1_0sx86")
+ColorPickerButton/fonts/font = ExtResource("1_0sx86")
+FoldableContainer/fonts/font = ExtResource("1_0sx86")
+GraphNodeTitleLabel/fonts/font = ExtResource("1_0sx86")
+ItemList/fonts/font = ExtResource("1_0sx86")
+Label/fonts/font = ExtResource("1_0sx86")
+LineEdit/fonts/font = ExtResource("1_0sx86")
+LinkButton/fonts/font = ExtResource("1_0sx86")
+MenuBar/fonts/font = ExtResource("1_0sx86")
+MenuButton/fonts/font = ExtResource("1_0sx86")
+OptionButton/fonts/font = ExtResource("1_0sx86")
+PopupMenu/fonts/font = ExtResource("1_0sx86")
+PopupMenu/fonts/font_separator = ExtResource("1_0sx86")
+ProgressBar/fonts/font = ExtResource("1_0sx86")
+RichTextLabel/fonts/bold_font = ExtResource("1_0sx86")
+RichTextLabel/fonts/bold_italics_font = ExtResource("1_0sx86")
+RichTextLabel/fonts/italics_font = ExtResource("1_0sx86")
+RichTextLabel/fonts/mono_font = ExtResource("1_0sx86")
+RichTextLabel/fonts/normal_font = ExtResource("1_0sx86")
+TabBar/fonts/font = ExtResource("1_0sx86")
+TabContainer/fonts/font = ExtResource("1_0sx86")
+TextEdit/fonts/font = ExtResource("1_0sx86")
+TooltipLabel/fonts/font = ExtResource("1_0sx86")
+Tree/fonts/font = ExtResource("1_0sx86")
+Tree/fonts/title_button_font = ExtResource("1_0sx86")
+Window/fonts/title_font = ExtResource("1_0sx86")

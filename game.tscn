@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://vf7oit55yivc"]
+
+[ext_resource type="PackedScene" uid="uid://na5nkvlpi3wl" path="res://props/table.tscn" id="1_feb5d"]
+[ext_resource type="PackedScene" uid="uid://bwl63tnhbfvnd" path="res://props/chair.tscn" id="2_fc0e3"]
+[ext_resource type="PackedScene" uid="uid://dwjtabu4u2kvo" path="res://props/npc.tscn" id="3_7jktm"]
+[ext_resource type="Script" uid="uid://bstu4mwerqkf7" path="res://player/player.gd" id="4_fc0e3"]
+[ext_resource type="Script" uid="uid://s013qi4osxtq" path="res://poker/deck.gd" id="6_ryrav"]
+
+[sub_resource type="Environment" id="Environment_ryrav"]
+background_mode = 1
+background_color = Color(0.14117648, 0.07058824, 0.14117648, 1)
+
+[node name="Game" type="Node3D" unique_id=746100068]
+
+[node name="Environment" type="Node3D" parent="." unique_id=1510362813]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Environment" unique_id=1444160962]
+transform = Transform3D(1, 0, 0, 0, 0.17364822, 0.9848077, 0, -0.9848077, 0.17364822, 0, 0, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Environment" unique_id=2114265791]
+environment = SubResource("Environment_ryrav")
+
+[node name="Set" type="Node3D" parent="." unique_id=1432573322]
+
+[node name="Table" parent="Set" unique_id=1832727909 instance=ExtResource("1_feb5d")]
+
+[node name="Player1" parent="Set" unique_id=68328689 groups=["NPC"] instance=ExtResource("3_7jktm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
+
+[node name="Chair" parent="Set/Player1" unique_id=35847422 instance=ExtResource("2_fc0e3")]
+
+[node name="Player2" parent="Set" unique_id=517466938 groups=["NPC"] instance=ExtResource("3_7jktm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 4)
+
+[node name="Chair" parent="Set/Player2" unique_id=393042296 instance=ExtResource("2_fc0e3")]
+
+[node name="Player3" parent="Set" unique_id=390840901 groups=["NPC"] instance=ExtResource("3_7jktm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 4)
+
+[node name="Chair" parent="Set/Player3" unique_id=1259845108 instance=ExtResource("2_fc0e3")]
+
+[node name="Player4" parent="Set" unique_id=50357087 groups=["NPC"] instance=ExtResource("3_7jktm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0)
+
+[node name="Chair" parent="Set/Player4" unique_id=703973145 instance=ExtResource("2_fc0e3")]
+
+[node name="DEALER" parent="Set" unique_id=1257434800 instance=ExtResource("3_7jktm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+
+[node name="Chair5" parent="Set/DEALER" unique_id=309341298 instance=ExtResource("2_fc0e3")]
+
+[node name="YOU" type="Node3D" parent="." unique_id=1636203860]
+script = ExtResource("4_fc0e3")
+
+[node name="Camera3D" type="Camera3D" parent="YOU" unique_id=1461095773]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 5, 0)
+
+[node name="Deck" type="Node3D" parent="." unique_id=1276455260]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+script = ExtResource("6_ryrav")

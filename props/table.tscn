@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://na5nkvlpi3wl"]
+
+[ext_resource type="PhysicsMaterial" uid="uid://bfevd2f5kmg8t" path="res://props/physics/fabric.tres" id="1_h3d66"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_w8btp"]
+size = Vector3(8, 1, 5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_w8btp"]
+size = Vector3(8, 1, 5)
+
+[node name="Table" type="StaticBody3D" unique_id=1863985010]
+physics_material_override = ExtResource("1_h3d66")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=251089762]
+mesh = SubResource("BoxMesh_w8btp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1147041822]
+shape = SubResource("BoxShape3D_w8btp")

@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="CardMaterials" format=3 uid="uid://vn3bn1xhrhp7"]
+
+[ext_resource type="Script" uid="uid://cxww8m8n5jy4v" path="res://poker/card_mats.gd" id="1_rmf0k"]
+
+[resource]
+script = ExtResource("1_rmf0k")
+metadata/_custom_type_script = "uid://cxww8m8n5jy4v"

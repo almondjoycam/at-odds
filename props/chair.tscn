@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bwl63tnhbfvnd"]
+
+[sub_resource type="TorusMesh" id="TorusMesh_43sb0"]
+
+[node name="Chair" type="Node3D" unique_id=1259845108]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1250125262]
+mesh = SubResource("TorusMesh_43sb0")

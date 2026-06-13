@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://b3rcesmdqq163"]
+
+[ext_resource type="Script" uid="uid://b4x6nw81p2t24" path="res://poker/card.gd" id="1_xoatd"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_xoatd"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ebwaa"]
+albedo_texture = SubResource("PlaceholderTexture2D_xoatd")
+
+[sub_resource type="QuadMesh" id="QuadMesh_ebwaa"]
+resource_local_to_scene = true
+material = SubResource("StandardMaterial3D_ebwaa")
+size = Vector2(0.2, 0.3)
+orientation = 1
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_omfbd"]
+size = Vector3(0.2, 0.01, 0.3)
+
+[node name="Card" type="RigidBody3D" unique_id=1749647191]
+axis_lock_angular_x = true
+axis_lock_angular_z = true
+mass = 0.1
+continuous_cd = true
+max_contacts_reported = 1
+linear_damp = 1.0
+angular_damp = 20.0
+script = ExtResource("1_xoatd")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1593239803]
+mesh = SubResource("QuadMesh_ebwaa")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=809488999]
+shape = SubResource("BoxShape3D_omfbd")
