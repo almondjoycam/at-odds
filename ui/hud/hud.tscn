@@ -4,6 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://cc5v1yagf1bd6" path="res://ui/hud/belief.tres" id="2_e0nub"]
 [ext_resource type="Script" uid="uid://b2b530w0q1sq7" path="res://ui/hud/hud.gd" id="2_p3vm3"]
 [ext_resource type="Texture2D" uid="uid://cnoo4fxsr6r0" path="res://ui/hud/suspicion.tres" id="3_w75iv"]
+[ext_resource type="Texture2D" uid="uid://quk5nvh8a8bo" path="res://ui/hud/volume.png" id="3_imuuq"]
+[ext_resource type="Script" uid="uid://cxg7lfp2y3cti" path="res://ui/hud/volume.gd" id="4_imuuq"]
 [ext_resource type="Texture2D" uid="uid://csusakl5t0ail" path="res://poker/cards/card_back.png" id="4_w75iv"]
 [ext_resource type="Texture2D" uid="uid://cq7uqqpskpoho" path="res://ui/hud/distract.png" id="5_o2lis"]
 [ext_resource type="Texture2D" uid="uid://brjue8g1irpt8" path="res://ui/hud/golden-rake.png" id="6_gfles"]
@@ -18,8 +20,8 @@ atlas = ExtResource("2_e0nub")
 region = Rect2(0, 0, 104, 122)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kwc50"]
-atlas = ExtResource("3_w75iv")
-region = Rect2(0, 0, 105, 122)
+atlas = ExtResource("3_imuuq")
+region = Rect2(11, 12, 199.23703, 230)
 
 [node name="Hud" type="Control" unique_id=2007699849]
 layout_mode = 3
@@ -105,6 +107,38 @@ texture = SubResource("AtlasTexture_kwc50")
 expand_mode = 1
 stretch_mode = 5
 
+[node name="Volume" type="Control" parent="Stats" unique_id=986252310]
+layout_mode = 2
+
+[node name="HSlider" type="HSlider" parent="Stats/Volume" unique_id=1200627958]
+layout_mode = 0
+offset_left = -1088.0
+offset_top = 578.0
+offset_right = -798.0
+offset_bottom = 630.0
+max_value = 1.0
+step = 0.001
+value = 1.0
+script = ExtResource("4_imuuq")
+bus_name = "Master"
+
+[node name="TextureRect2" type="TextureRect" parent="Stats/Volume" unique_id=1430795781]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -1152.0
+offset_top = 504.0
+offset_right = -1088.0
+offset_bottom = 604.0
+grow_horizontal = 0
+grow_vertical = 2
+texture = SubResource("AtlasTexture_kwc50")
+expand_mode = 1
+stretch_mode = 5
+
 [node name="HandUI" type="Control" parent="." unique_id=577371935]
 visible = false
 layout_mode = 1
@@ -157,36 +191,6 @@ alignment = 2
 visible = false
 layout_mode = 2
 texture = ExtResource("4_w75iv")
-
-[node name="Abilities" type="VBoxContainer" parent="." unique_id=1227561475]
-visible = false
-layout_mode = 1
-anchors_preset = 9
-anchor_bottom = 1.0
-offset_right = 128.0
-grow_vertical = 2
-alignment = 2
-
-[node name="Distract" type="TextureRect" parent="Abilities" unique_id=1900059474]
-custom_minimum_size = Vector2(128, 128)
-layout_mode = 2
-texture = ExtResource("5_o2lis")
-expand_mode = 1
-stretch_mode = 4
-
-[node name="GoldenRake" type="TextureRect" parent="Abilities" unique_id=846745347]
-custom_minimum_size = Vector2(128, 128)
-layout_mode = 2
-texture = ExtResource("6_gfles")
-expand_mode = 1
-stretch_mode = 4
-
-[node name="DivineIntervention" type="TextureRect" parent="Abilities" unique_id=1404945601]
-custom_minimum_size = Vector2(128, 128)
-layout_mode = 2
-texture = ExtResource("7_aixkq")
-expand_mode = 1
-stretch_mode = 4
 
 [node name="CardPicker" type="VBoxContainer" parent="." unique_id=447866965]
 visible = false

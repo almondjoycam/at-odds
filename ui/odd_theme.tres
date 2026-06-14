@@ -5,6 +5,9 @@
 [ext_resource type="Texture2D" uid="uid://cnoo4fxsr6r0" path="res://ui/hud/suspicion.tres" id="3_wy4k1"]
 [ext_resource type="FontFile" uid="uid://bb1silgmi1qti" path="res://ui/fonts/Playball-Regular.ttf" id="4_x7185"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qa2sv"]
+bg_color = Color(0, 0, 0, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x7185"]
 bg_color = Color(0, 0, 0, 1)
 
@@ -59,6 +62,7 @@ LinkButton/fonts/font = ExtResource("1_wy4k1")
 MenuBar/fonts/font = ExtResource("1_wy4k1")
 MenuButton/fonts/font = ExtResource("1_wy4k1")
 OptionButton/fonts/font = ExtResource("1_wy4k1")
+Panel/styles/panel = SubResource("StyleBoxFlat_qa2sv")
 PopupMenu/fonts/font = ExtResource("1_wy4k1")
 PopupMenu/fonts/font_separator = ExtResource("1_wy4k1")
 ProgressBar/colors/font_color = Color(1, 1, 1, 1)

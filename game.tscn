@@ -8,6 +8,8 @@
 [ext_resource type="Script" uid="uid://s013qi4osxtq" path="res://poker/dealer.gd" id="6_ryrav"]
 [ext_resource type="PackedScene" uid="uid://ch4ejou0v3ot1" path="res://ui/hud/hud.tscn" id="7_eow3j"]
 [ext_resource type="Resource" uid="uid://vn3bn1xhrhp7" path="res://poker/card_default.tres" id="8_j5wjh"]
+[ext_resource type="AudioStream" uid="uid://bulotv7248huy" path="res://audio/jazz-ambiance.mp3" id="9_hve3p"]
+[ext_resource type="AudioStream" uid="uid://6t710x6o3qra" path="res://audio/chatter-ambiance.mp3" id="9_vef74"]
 
 [sub_resource type="Environment" id="Environment_ryrav"]
 background_mode = 1
@@ -78,3 +80,15 @@ transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 6
 [node name="Hud" parent="." unique_id=2007699849 instance=ExtResource("7_eow3j")]
 mouse_filter = 1
 card_material = ExtResource("8_j5wjh")
+
+[node name="Ambiance1" type="AudioStreamPlayer3D" parent="." unique_id=66714687]
+stream = ExtResource("9_hve3p")
+volume_db = -18.341
+autoplay = true
+parameters/looping = false
+
+[node name="Ambiance2" type="AudioStreamPlayer3D" parent="." unique_id=1115143612]
+stream = ExtResource("9_vef74")
+volume_db = -36.329
+autoplay = true
+parameters/looping = false
