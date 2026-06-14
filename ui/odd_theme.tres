@@ -4,6 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://cc5v1yagf1bd6" path="res://ui/hud/belief.tres" id="2_qa2sv"]
 [ext_resource type="Texture2D" uid="uid://cnoo4fxsr6r0" path="res://ui/hud/suspicion.tres" id="3_wy4k1"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qa2sv"]
+bg_color = Color(0, 0, 0, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x7185"]
 bg_color = Color(0, 0, 0, 1)
 
@@ -56,6 +59,7 @@ LinkButton/fonts/font = ExtResource("1_0sx86")
 MenuBar/fonts/font = ExtResource("1_0sx86")
 MenuButton/fonts/font = ExtResource("1_0sx86")
 OptionButton/fonts/font = ExtResource("1_0sx86")
+Panel/styles/panel = SubResource("StyleBoxFlat_qa2sv")
 PopupMenu/fonts/font = ExtResource("1_0sx86")
 PopupMenu/fonts/font_separator = ExtResource("1_0sx86")
 ProgressBar/colors/font_color = Color(1, 1, 1, 1)

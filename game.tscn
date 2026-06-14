@@ -74,3 +74,5 @@ script = ExtResource("4_fc0e3")
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 5, 0)
 
 [node name="Hud" parent="." unique_id=2007699849 instance=ExtResource("7_eow3j")]
+
+[node name="Node2D" type="Node2D" parent="." unique_id=555855197]

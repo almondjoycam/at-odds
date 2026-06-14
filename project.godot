@@ -11,8 +11,14 @@ config_version=5
 [application]
 
 config/name="At Odds"
+run/main_scene="uid://ce0vy1sb6ockw"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[editor]
+
+version_control/plugin_name="GitPlugin"
+version_control/autoload_on_startup=true
 
 [file_customization]
 
