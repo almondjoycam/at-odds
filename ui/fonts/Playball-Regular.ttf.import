@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://doroy8n8evmwy"
-path="res://.godot/imported/IosevkaEtoile-Regular.ttc-5ac1ec038ea8e28b2ae47303c5015818.fontdata"
+uid="uid://bb1silgmi1qti"
+path="res://.godot/imported/Playball-Regular.ttf-293c81c7f359ca617fd171e047bc3bde.fontdata"
 
 [deps]
 
-source_file="res://ui/IosevkaEtoile-Regular.ttc"
-dest_files=["res://.godot/imported/IosevkaEtoile-Regular.ttc-5ac1ec038ea8e28b2ae47303c5015818.fontdata"]
+source_file="res://ui/fonts/Playball-Regular.ttf"
+dest_files=["res://.godot/imported/Playball-Regular.ttf-293c81c7f359ca617fd171e047bc3bde.fontdata"]
 
 [params]
 
