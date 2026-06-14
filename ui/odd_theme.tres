@@ -1,8 +1,9 @@
 [gd_resource type="Theme" format=3 uid="uid://u5a6w1fswmu2"]
 
-[ext_resource type="FontFile" uid="uid://doroy8n8evmwy" path="res://ui/IosevkaEtoile-Regular.ttc" id="1_0sx86"]
+[ext_resource type="FontFile" uid="uid://doroy8n8evmwy" path="res://ui/fonts/IosevkaEtoile-Regular.ttc" id="1_wy4k1"]
 [ext_resource type="Texture2D" uid="uid://cc5v1yagf1bd6" path="res://ui/hud/belief.tres" id="2_qa2sv"]
 [ext_resource type="Texture2D" uid="uid://cnoo4fxsr6r0" path="res://ui/hud/suspicion.tres" id="3_wy4k1"]
+[ext_resource type="FontFile" uid="uid://bb1silgmi1qti" path="res://ui/fonts/Playball-Regular.ttf" id="4_x7185"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x7185"]
 bg_color = Color(0, 0, 0, 1)
@@ -30,51 +31,53 @@ axis_stretch_vertical = 1
 region_rect = Rect2(141, 17, 343, 87)
 
 [resource]
-default_font = ExtResource("1_0sx86")
+default_font = ExtResource("1_wy4k1")
 default_font_size = 24
-Button/fonts/font = ExtResource("1_0sx86")
-CheckBox/fonts/font = ExtResource("1_0sx86")
-CheckButton/fonts/font = ExtResource("1_0sx86")
-CodeEdit/fonts/font = ExtResource("1_0sx86")
-ColorPickerButton/fonts/font = ExtResource("1_0sx86")
-FoldableContainer/fonts/font = ExtResource("1_0sx86")
-GraphNodeTitleLabel/fonts/font = ExtResource("1_0sx86")
+Button/fonts/font = ExtResource("1_wy4k1")
+CheckBox/fonts/font = ExtResource("1_wy4k1")
+CheckButton/fonts/font = ExtResource("1_wy4k1")
+CodeEdit/fonts/font = ExtResource("1_wy4k1")
+ColorPickerButton/fonts/font = ExtResource("1_wy4k1")
+FoldableContainer/fonts/font = ExtResource("1_wy4k1")
+GraphNodeTitleLabel/fonts/font = ExtResource("1_wy4k1")
 HSlider/styles/grabber_area = null
 HSlider/styles/grabber_area_highlight = null
 HSlider/styles/slider = null
 HeaderLarge/colors/font_outline_color = Color(0, 0, 0, 1)
 HeaderLarge/constants/outline_size = 16
 HeaderLarge/font_sizes/font_size = 64
+HeaderLarge/fonts/font = ExtResource("4_x7185")
 HeaderMedium/colors/font_outline_color = Color(0, 0, 0, 1)
 HeaderMedium/constants/outline_size = 8
-HeaderMedium/font_sizes/font_size = 32
+HeaderMedium/font_sizes/font_size = 42
+HeaderMedium/fonts/font = ExtResource("4_x7185")
 HeaderSmall/font_sizes/font_size = 24
-ItemList/fonts/font = ExtResource("1_0sx86")
-Label/fonts/font = ExtResource("1_0sx86")
-LineEdit/fonts/font = ExtResource("1_0sx86")
-LinkButton/fonts/font = ExtResource("1_0sx86")
-MenuBar/fonts/font = ExtResource("1_0sx86")
-MenuButton/fonts/font = ExtResource("1_0sx86")
-OptionButton/fonts/font = ExtResource("1_0sx86")
-PopupMenu/fonts/font = ExtResource("1_0sx86")
-PopupMenu/fonts/font_separator = ExtResource("1_0sx86")
+ItemList/fonts/font = ExtResource("1_wy4k1")
+Label/fonts/font = ExtResource("1_wy4k1")
+LineEdit/fonts/font = ExtResource("1_wy4k1")
+LinkButton/fonts/font = ExtResource("1_wy4k1")
+MenuBar/fonts/font = ExtResource("1_wy4k1")
+MenuButton/fonts/font = ExtResource("1_wy4k1")
+OptionButton/fonts/font = ExtResource("1_wy4k1")
+PopupMenu/fonts/font = ExtResource("1_wy4k1")
+PopupMenu/fonts/font_separator = ExtResource("1_wy4k1")
 ProgressBar/colors/font_color = Color(1, 1, 1, 1)
 ProgressBar/colors/font_outline_color = Color(0, 0, 0, 1)
 ProgressBar/constants/outline_size = 8
-ProgressBar/fonts/font = ExtResource("1_0sx86")
+ProgressBar/fonts/font = ExtResource("1_wy4k1")
 ProgressBar/styles/background = SubResource("StyleBoxFlat_x7185")
 ProgressBar/styles/fill = SubResource("StyleBoxTexture_wfg0e")
-RichTextLabel/fonts/bold_font = ExtResource("1_0sx86")
-RichTextLabel/fonts/bold_italics_font = ExtResource("1_0sx86")
-RichTextLabel/fonts/italics_font = ExtResource("1_0sx86")
-RichTextLabel/fonts/mono_font = ExtResource("1_0sx86")
-RichTextLabel/fonts/normal_font = ExtResource("1_0sx86")
+RichTextLabel/fonts/bold_font = ExtResource("1_wy4k1")
+RichTextLabel/fonts/bold_italics_font = ExtResource("1_wy4k1")
+RichTextLabel/fonts/italics_font = ExtResource("1_wy4k1")
+RichTextLabel/fonts/mono_font = ExtResource("1_wy4k1")
+RichTextLabel/fonts/normal_font = ExtResource("1_wy4k1")
 SuspicionBar/base_type = &"ProgressBar"
 SuspicionBar/styles/fill = SubResource("StyleBoxTexture_4lis8")
-TabBar/fonts/font = ExtResource("1_0sx86")
-TabContainer/fonts/font = ExtResource("1_0sx86")
-TextEdit/fonts/font = ExtResource("1_0sx86")
-TooltipLabel/fonts/font = ExtResource("1_0sx86")
-Tree/fonts/font = ExtResource("1_0sx86")
-Tree/fonts/title_button_font = ExtResource("1_0sx86")
-Window/fonts/title_font = ExtResource("1_0sx86")
+TabBar/fonts/font = ExtResource("1_wy4k1")
+TabContainer/fonts/font = ExtResource("1_wy4k1")
+TextEdit/fonts/font = ExtResource("1_wy4k1")
+TooltipLabel/fonts/font = ExtResource("1_wy4k1")
+Tree/fonts/font = ExtResource("1_wy4k1")
+Tree/fonts/title_button_font = ExtResource("1_wy4k1")
+Window/fonts/title_font = ExtResource("1_wy4k1")
