@@ -53,4 +53,4 @@ District Jam VII game
  	- [ ] whoosh sfx for dealer looking away and cards
 	- [ ] golden rake for if you win and lose
  	- [ ] divine intervention game sfx and maybe music
-	- [ ] menu click sfx
+	- [x] menu click sfx
