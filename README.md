@@ -38,8 +38,6 @@ District Jam VII game
 	- divine intervention: you put one player in a trance for the whole game and force them to go all in, you can still manipulate cards here, one every 5 games unlocked at 50%
 - 3D assets
 	- [x] poker chips
-	- [ ] table
-	- [ ] simple people
 - UI
 	- [x] menu screen
 	- [x] pause
@@ -49,7 +47,6 @@ District Jam VII game
 	- [x] HUD for believers and abilities and dealer suspicion
 - music/sfx
 	- [x] slow jazz trumpet solo and chatting for casino ambiance (ambience credit to DerrickMckinnon (chatter) and kevp888 (jazz) on Freesound.org)
-	- [ ] triumphant trumpet for end credits (similar to Touch The Sky by Kanye West)
  	- [x] whoosh sfx for dealer looking away and cards
 	- [x] golden rake for if you win and lose
  	- [x] divine intervention game sfx and maybe music
