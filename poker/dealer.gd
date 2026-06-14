@@ -21,6 +21,7 @@ func _ready() -> void:
 	await ready_for_next_phase
 	print(deal_index)
 	#deal_community(5)
+	Global.win_selected.connect(end_game)
 
 func shuffle() -> void:
 	for s in suits:
@@ -57,3 +58,44 @@ func deal_community(num: int) -> void:
 		deck[deal_index + i].reparent(table)
 	deal_index += num
 	ready_for_next_phase.emit()
+
+func end_game(selected_winner: NPC) -> void:
+	print(hand_score(selected_winner.get_cards()))
+	var results := compare_all_hands()
+	if results[0] != selected_winner:
+		Global.game_over.emit(false)
+	else:
+		Global.game_over.emit(true)
+
+func compare_all_hands() -> Array[NPC]:
+	var standings: Array[NPC]
+	var temp: NPC
+	for player in players:
+		standings.append(player as NPC)
+	for i in range(len(standings)):
+		for j in range(i):
+			if compare_hands(standings[i].get_cards(), standings[j].get_cards()) > 0:
+				temp = standings[i]
+				standings[i] = standings[j]
+				standings[j] = temp
+	return standings
+
+static func compare_hands(hand1: Array[Card], hand2: Array[Card]) -> int:
+	return hand_score(hand1) - hand_score(hand2)
+
+static func hand_score(hand: Array[Card]) -> int:
+	var rank_sum: int = 0
+	var same_suit: bool = true
+	var same_rank: bool = true
+	var starting_rank: int = hand[0].rank
+	var starting_suit: Card.Suit = hand[0].suit
+	for card in hand:
+		if card.rank == 0:
+			rank_sum += 13
+		else:
+			rank_sum += card.rank
+		if card.suit != starting_suit:
+			same_suit = false
+		if card.rank != starting_rank:
+			same_rank = false
+	return rank_sum * (4 if same_suit else 1) * (4 if same_rank else 1)

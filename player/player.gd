@@ -11,7 +11,7 @@ func _ready() -> void:
 	table_selected.connect(_on_table_selected)
 
 func _on_player_selected(player: NPC) -> void:
-	hud.set_cards_in_hand(player.name, player.get_cards())
+	hud.set_cards_in_hand(player.get_cards(), player)
 
 func _on_table_selected() -> void:
 	var community_cards: Array[Card]
@@ -19,4 +19,4 @@ func _on_table_selected() -> void:
 		var card = node as Card
 		if card:
 			community_cards.append(card)
-	hud.set_cards_in_hand("Community", community_cards)
+	hud.set_cards_in_hand(community_cards)

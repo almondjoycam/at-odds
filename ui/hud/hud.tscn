@@ -3,17 +3,17 @@
 [ext_resource type="Theme" uid="uid://u5a6w1fswmu2" path="res://ui/odd_theme.tres" id="1_xmswo"]
 [ext_resource type="Texture2D" uid="uid://cc5v1yagf1bd6" path="res://ui/hud/belief.tres" id="2_e0nub"]
 [ext_resource type="Script" uid="uid://b2b530w0q1sq7" path="res://ui/hud/hud.gd" id="2_p3vm3"]
-[ext_resource type="Texture2D" uid="uid://cnoo4fxsr6r0" path="res://ui/hud/suspicion.tres" id="3_w75iv"]
 [ext_resource type="Texture2D" uid="uid://quk5nvh8a8bo" path="res://ui/hud/volume.png" id="3_imuuq"]
-[ext_resource type="Script" uid="uid://cxg7lfp2y3cti" path="res://ui/hud/volume.gd" id="4_imuuq"]
+[ext_resource type="Script" path="res://ui/hud/volume.gd" id="4_imuuq"]
 [ext_resource type="Texture2D" uid="uid://csusakl5t0ail" path="res://poker/cards/card_back.png" id="4_w75iv"]
-[ext_resource type="Texture2D" uid="uid://cq7uqqpskpoho" path="res://ui/hud/distract.png" id="5_o2lis"]
 [ext_resource type="Texture2D" uid="uid://brjue8g1irpt8" path="res://ui/hud/golden-rake.png" id="6_gfles"]
-[ext_resource type="Texture2D" uid="uid://dm0yfv2v48qtr" path="res://ui/hud/divine-intervention.png" id="7_aixkq"]
+[ext_resource type="Texture2D" uid="uid://ci8pagktpxpir" path="res://ui/hud/close.png" id="6_p3vm3"]
 [ext_resource type="Texture2D" uid="uid://bgvfkuuo0mitc" path="res://poker/heart.png" id="8_5uuaq"]
 [ext_resource type="Texture2D" uid="uid://buhb24f3tr3p2" path="res://poker/spade.png" id="9_p3vm3"]
 [ext_resource type="Texture2D" uid="uid://b574grw7am5ar" path="res://poker/diamond.png" id="10_gv4gi"]
 [ext_resource type="Texture2D" uid="uid://86g4qbmqdhq2" path="res://poker/club.png" id="11_5mn0o"]
+[ext_resource type="Texture2D" uid="uid://wdqb7s0c7o8h" path="res://ui/menu-screen/win.png" id="13_5mn0o"]
+[ext_resource type="Texture2D" uid="uid://c6em5o1h22cyo" path="res://ui/menu-screen/loss.png" id="14_3mxrk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_imuuq"]
 atlas = ExtResource("2_e0nub")
@@ -163,17 +163,32 @@ grow_horizontal = 0
 text = "Player 1's Hand"
 horizontal_alignment = 2
 
-[node name="Close" type="Button" parent="HandUI" unique_id=1353251968]
+[node name="Close" type="TextureButton" parent="HandUI" unique_id=1267950298]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -11.0
-offset_right = 11.0
-offset_bottom = 39.0
+offset_left = -21.0
+offset_right = 41.461548
+offset_bottom = 58.0
 grow_horizontal = 2
-text = "X"
-flat = true
+texture_normal = ExtResource("6_p3vm3")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="SelectWin" type="TextureButton" parent="HandUI" unique_id=1056691192]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 41.0
+offset_right = 103.46155
+offset_bottom = 58.0
+grow_horizontal = 2
+texture_normal = ExtResource("6_gfles")
+ignore_texture_size = true
+stretch_mode = 5
 
 [node name="Hand" type="HBoxContainer" parent="HandUI" unique_id=1109914798]
 custom_minimum_size = Vector2(0, 300)
@@ -204,6 +219,7 @@ anchor_bottom = 0.5
 offset_left = 0.08798218
 offset_bottom = 250.0
 grow_horizontal = 2
+mouse_filter = 0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CardPicker" unique_id=1908388060]
 layout_mode = 2
@@ -240,4 +256,38 @@ text = "Rank"
 [node name="ItemList" type="SpinBox" parent="CardPicker/HBoxContainer2" unique_id=309870458]
 layout_mode = 2
 
+[node name="GameOverScreens" type="Control" parent="." unique_id=1817572716]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Win" type="TextureRect" parent="GameOverScreens" unique_id=2139588726]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("13_5mn0o")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Lose" type="TextureRect" parent="GameOverScreens" unique_id=2080598104]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("14_3mxrk")
+expand_mode = 1
+stretch_mode = 5
+
 [connection signal="pressed" from="HandUI/Close" to="." method="hide_hand_ui"]
+[connection signal="pressed" from="HandUI/SelectWin" to="." method="select_win"]
