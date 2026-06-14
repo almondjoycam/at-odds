@@ -46,7 +46,7 @@ District Jam VII game
 	- [ ] settings
 	- [ ] win / lose
 	- [ ] picking the cards
-	- [ ] HUD for believers and abilities and dealer suspicion
+	- [x] HUD for believers and abilities and dealer suspicion
 - music/sfx
 	- [x] slow jazz trumpet solo and chatting for casino ambiance (similar to Casey's Song from Whiplash)
 	- [ ] triumphant trumpet for end credits (similar to Touch The Sky by Kanye West)
