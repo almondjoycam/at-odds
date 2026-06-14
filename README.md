@@ -48,7 +48,7 @@ District Jam VII game
 	- [ ] picking the cards
 	- [x] HUD for believers and abilities and dealer suspicion
 - music/sfx
-	- [x] slow jazz trumpet solo and chatting for casino ambiance (similar to Casey's Song from Whiplash)
+	- [x] slow jazz trumpet solo and chatting for casino ambiance (ambience credit to DerrickMckinnon on Freesound.org)
 	- [ ] triumphant trumpet for end credits (similar to Touch The Sky by Kanye West)
  	- [ ] whoosh sfx for dealer looking away and cards
 	- [ ] golden rake for if you win and lose
