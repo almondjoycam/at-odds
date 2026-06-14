@@ -45,7 +45,7 @@ District Jam VII game
 	- [ ] pause
 	- [ ] settings
 	- [ ] win / lose
-	- [ ] picking the cards
+	- [x] picking the cards
 	- [x] HUD for believers and abilities and dealer suspicion
 - music/sfx
 	- [x] slow jazz trumpet solo and chatting for casino ambiance (ambience credit to DerrickMckinnon (chatter) and kevp888 (jazz) on Freesound.org)
