@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://csusakl5t0ail" path="res://poker/cards/card_back.png" id="5_ryrav"]
 [ext_resource type="Script" uid="uid://s013qi4osxtq" path="res://poker/dealer.gd" id="6_ryrav"]
 [ext_resource type="PackedScene" uid="uid://ch4ejou0v3ot1" path="res://ui/hud/hud.tscn" id="7_eow3j"]
+[ext_resource type="Resource" uid="uid://vn3bn1xhrhp7" path="res://poker/card_default.tres" id="8_j5wjh"]
 
 [sub_resource type="Environment" id="Environment_ryrav"]
 background_mode = 1
@@ -68,7 +69,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.51, 2)
 mesh = SubResource("QuadMesh_eow3j")
 surface_material_override/0 = SubResource("StandardMaterial3D_xoatd")
 
-[node name="YOU" type="Node3D" parent="." unique_id=1636203860]
+[node name="YOU" type="Node3D" parent="." unique_id=1636203860 groups=["player"]]
 script = ExtResource("4_fc0e3")
 
 [node name="Camera3D" type="Camera3D" parent="YOU" unique_id=1461095773]
@@ -76,3 +77,4 @@ transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 6
 
 [node name="Hud" parent="." unique_id=2007699849 instance=ExtResource("7_eow3j")]
 mouse_filter = 1
+card_material = ExtResource("8_j5wjh")

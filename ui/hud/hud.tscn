@@ -2,6 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://u5a6w1fswmu2" path="res://ui/odd_theme.tres" id="1_xmswo"]
 [ext_resource type="Texture2D" uid="uid://cc5v1yagf1bd6" path="res://ui/hud/belief.tres" id="2_e0nub"]
+[ext_resource type="Script" uid="uid://b2b530w0q1sq7" path="res://ui/hud/hud.gd" id="2_p3vm3"]
 [ext_resource type="Texture2D" uid="uid://cnoo4fxsr6r0" path="res://ui/hud/suspicion.tres" id="3_w75iv"]
 [ext_resource type="Texture2D" uid="uid://csusakl5t0ail" path="res://poker/cards/card_back.png" id="4_w75iv"]
 [ext_resource type="Texture2D" uid="uid://cq7uqqpskpoho" path="res://ui/hud/distract.png" id="5_o2lis"]
@@ -28,6 +29,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_xmswo")
+script = ExtResource("2_p3vm3")
 
 [node name="Stats" type="HBoxContainer" parent="." unique_id=1664414655]
 layout_mode = 1
@@ -127,6 +129,18 @@ grow_horizontal = 0
 text = "Player 1's Hand"
 horizontal_alignment = 2
 
+[node name="Close" type="Button" parent="HandUI" unique_id=1353251968]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -11.0
+offset_right = 11.0
+offset_bottom = 39.0
+grow_horizontal = 2
+text = "X"
+flat = true
+
 [node name="Hand" type="HBoxContainer" parent="HandUI" unique_id=1109914798]
 custom_minimum_size = Vector2(0, 300)
 layout_mode = 1
@@ -139,11 +153,8 @@ grow_horizontal = 2
 grow_vertical = 0
 alignment = 2
 
-[node name="Card1" type="TextureRect" parent="HandUI/Hand" unique_id=1975831961]
-layout_mode = 2
-texture = ExtResource("4_w75iv")
-
-[node name="Card2" type="TextureRect" parent="HandUI/Hand" unique_id=1286094741]
+[node name="Card" type="TextureRect" parent="HandUI/Hand" unique_id=1975831961]
+visible = false
 layout_mode = 2
 texture = ExtResource("4_w75iv")
 
@@ -224,3 +235,5 @@ text = "Rank"
 
 [node name="ItemList" type="SpinBox" parent="CardPicker/HBoxContainer2" unique_id=309870458]
 layout_mode = 2
+
+[connection signal="pressed" from="HandUI/Close" to="." method="hide_hand_ui"]

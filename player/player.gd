@@ -1,13 +1,11 @@
 class_name Player extends Node3D
 
-@onready var players: Array[Node] = $"../Set".get_children()
-var move: Vector3 = Vector3.ZERO
+@onready var hud: HUD = $"../Hud" as HUD
+
+signal player_selected(player: NPC)
 
 func _ready() -> void:
-	pass
+	player_selected.connect(_on_player_selected)
 
-func _process(delta: float) -> void:
-	pass
-
-func _input(event: InputEvent) -> void:
-	pass
+func _on_player_selected(player: NPC):
+	hud.set_cards_in_hand(player.name, player.get_cards())
