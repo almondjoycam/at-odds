@@ -42,9 +42,9 @@ District Jam VII game
 	- [ ] simple people
 - UI
 	- [x] menu screen
-	- [ ] pause
+	- [x] pause
 	- [ ] settings
-	- [ ] win / lose
+	- [x] win / lose
 	- [x] picking the cards
 	- [x] HUD for believers and abilities and dealer suspicion
 - music/sfx
