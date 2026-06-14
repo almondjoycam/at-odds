@@ -7,6 +7,10 @@
 [ext_resource type="Texture2D" uid="uid://cq7uqqpskpoho" path="res://ui/hud/distract.png" id="5_o2lis"]
 [ext_resource type="Texture2D" uid="uid://brjue8g1irpt8" path="res://ui/hud/golden-rake.png" id="6_gfles"]
 [ext_resource type="Texture2D" uid="uid://dm0yfv2v48qtr" path="res://ui/hud/divine-intervention.png" id="7_aixkq"]
+[ext_resource type="Texture2D" uid="uid://bgvfkuuo0mitc" path="res://poker/heart.png" id="8_5uuaq"]
+[ext_resource type="Texture2D" uid="uid://buhb24f3tr3p2" path="res://poker/spade.png" id="9_p3vm3"]
+[ext_resource type="Texture2D" uid="uid://b574grw7am5ar" path="res://poker/diamond.png" id="10_gv4gi"]
+[ext_resource type="Texture2D" uid="uid://86g4qbmqdhq2" path="res://poker/club.png" id="11_5mn0o"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_imuuq"]
 atlas = ExtResource("2_e0nub")
@@ -174,6 +178,7 @@ expand_mode = 1
 stretch_mode = 4
 
 [node name="CardPicker" type="VBoxContainer" parent="." unique_id=447866965]
+visible = false
 custom_minimum_size = Vector2(0, 250)
 layout_mode = 1
 anchors_preset = -1
@@ -199,10 +204,15 @@ auto_width = true
 auto_height = true
 item_count = 4
 max_columns = 4
+fixed_icon_size = Vector2i(128, 128)
 item_0/text = "Hearts"
+item_0/icon = ExtResource("8_5uuaq")
 item_1/text = "Spades"
+item_1/icon = ExtResource("9_p3vm3")
 item_2/text = "Diamonds"
+item_2/icon = ExtResource("10_gv4gi")
 item_3/text = "Clubs"
+item_3/icon = ExtResource("11_5mn0o")
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="CardPicker" unique_id=904399752]
 layout_mode = 2

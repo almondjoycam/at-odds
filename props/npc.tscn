@@ -1,8 +1,16 @@
 [gd_scene format=3 uid="uid://dwjtabu4u2kvo"]
 
+[ext_resource type="Script" uid="uid://bqk50kut23o56" path="res://poker/npc.gd" id="1_k3cdh"]
+
 [sub_resource type="SphereMesh" id="SphereMesh_kbopf"]
 
-[node name="Npc" type="Node3D" unique_id=390840901]
+[sub_resource type="SphereShape3D" id="SphereShape3D_kbopf"]
+
+[node name="Npc" type="StaticBody3D" unique_id=882533369]
+script = ExtResource("1_k3cdh")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=202706631]
 mesh = SubResource("SphereMesh_kbopf")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=388173764]
+shape = SubResource("SphereShape3D_kbopf")
