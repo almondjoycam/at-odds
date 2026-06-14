@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://bstu4mwerqkf7" path="res://player/player.gd" id="4_fc0e3"]
 [ext_resource type="Texture2D" uid="uid://csusakl5t0ail" path="res://poker/cards/card_back.png" id="5_ryrav"]
 [ext_resource type="Script" uid="uid://s013qi4osxtq" path="res://poker/dealer.gd" id="6_ryrav"]
+[ext_resource type="PackedScene" uid="uid://ch4ejou0v3ot1" path="res://ui/hud/hud.tscn" id="7_eow3j"]
 
 [sub_resource type="Environment" id="Environment_ryrav"]
 background_mode = 1
@@ -71,3 +72,5 @@ script = ExtResource("4_fc0e3")
 
 [node name="Camera3D" type="Camera3D" parent="YOU" unique_id=1461095773]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 5, 0)
+
+[node name="Hud" parent="." unique_id=2007699849 instance=ExtResource("7_eow3j")]

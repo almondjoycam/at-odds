@@ -6,27 +6,28 @@
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x7185"]
 bg_color = Color(0, 0, 0, 1)
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
-border_width_bottom = 5
-border_color = Color(0, 0, 0, 0)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wfg0e"]
-content_margin_top = 16.0
-content_margin_bottom = 16.0
 texture = ExtResource("2_qa2sv")
-texture_margin_left = 128.0
-expand_margin_left = 128.0
+texture_margin_left = 1.0
+texture_margin_top = 1.0
+texture_margin_right = 1.0
+texture_margin_bottom = 1.0
 axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+region_rect = Rect2(141, 17, 343, 87)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4lis8"]
 content_margin_top = 16.0
 content_margin_bottom = 16.0
 texture = ExtResource("3_wy4k1")
-texture_margin_left = 128.0
-expand_margin_left = 128.0
+texture_margin_left = 1.0
+texture_margin_top = 1.0
+texture_margin_right = 1.0
+texture_margin_bottom = 1.0
 axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+region_rect = Rect2(141, 17, 343, 87)
 
 [resource]
 default_font = ExtResource("1_0sx86")
@@ -41,6 +42,13 @@ GraphNodeTitleLabel/fonts/font = ExtResource("1_0sx86")
 HSlider/styles/grabber_area = null
 HSlider/styles/grabber_area_highlight = null
 HSlider/styles/slider = null
+HeaderLarge/colors/font_outline_color = Color(0, 0, 0, 1)
+HeaderLarge/constants/outline_size = 16
+HeaderLarge/font_sizes/font_size = 64
+HeaderMedium/colors/font_outline_color = Color(0, 0, 0, 1)
+HeaderMedium/constants/outline_size = 8
+HeaderMedium/font_sizes/font_size = 32
+HeaderSmall/font_sizes/font_size = 24
 ItemList/fonts/font = ExtResource("1_0sx86")
 Label/fonts/font = ExtResource("1_0sx86")
 LineEdit/fonts/font = ExtResource("1_0sx86")

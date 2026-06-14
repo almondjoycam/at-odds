@@ -1,6 +1,20 @@
 [gd_scene format=3 uid="uid://ch4ejou0v3ot1"]
 
 [ext_resource type="Theme" uid="uid://u5a6w1fswmu2" path="res://ui/odd_theme.tres" id="1_xmswo"]
+[ext_resource type="Texture2D" uid="uid://cc5v1yagf1bd6" path="res://ui/hud/belief.tres" id="2_e0nub"]
+[ext_resource type="Texture2D" uid="uid://cnoo4fxsr6r0" path="res://ui/hud/suspicion.tres" id="3_w75iv"]
+[ext_resource type="Texture2D" uid="uid://csusakl5t0ail" path="res://poker/cards/card_back.png" id="4_w75iv"]
+[ext_resource type="Texture2D" uid="uid://cq7uqqpskpoho" path="res://ui/hud/distract.png" id="5_o2lis"]
+[ext_resource type="Texture2D" uid="uid://brjue8g1irpt8" path="res://ui/hud/golden-rake.png" id="6_gfles"]
+[ext_resource type="Texture2D" uid="uid://dm0yfv2v48qtr" path="res://ui/hud/divine-intervention.png" id="7_aixkq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_imuuq"]
+atlas = ExtResource("2_e0nub")
+region = Rect2(0, 0, 104, 122)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kwc50"]
+atlas = ExtResource("3_w75iv")
+region = Rect2(0, 0, 105, 122)
 
 [node name="Hud" type="Control" unique_id=2007699849]
 layout_mode = 3
@@ -11,11 +25,128 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_xmswo")
 
-[node name="ProgressBar" type="ProgressBar" parent="." unique_id=435076032]
-layout_mode = 0
-offset_left = 94.0
-offset_top = 72.0
-offset_right = 222.0
-offset_bottom = 113.0
+[node name="Stats" type="HBoxContainer" parent="." unique_id=1664414655]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 100.0
+grow_horizontal = 2
+
+[node name="Belief" type="Control" parent="Stats" unique_id=744729082]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ProgressBar" type="ProgressBar" parent="Stats/Belief" unique_id=435076032]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 64.0
+offset_top = -26.0
+offset_right = 354.0
+offset_bottom = 26.0
+grow_vertical = 2
 step = 5.0
-value = 50.0
+value = 20.0
+
+[node name="TextureRect" type="TextureRect" parent="Stats/Belief" unique_id=862968741]
+layout_mode = 1
+offset_right = 64.0
+offset_bottom = 100.0
+texture = SubResource("AtlasTexture_imuuq")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Round" type="Label" parent="Stats" unique_id=762493404]
+layout_mode = 2
+theme_type_variation = &"HeaderMedium"
+text = "Round 1 of 4"
+
+[node name="Suspicion" type="Control" parent="Stats" unique_id=1155583428]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ProgressBar" type="ProgressBar" parent="Stats/Suspicion" unique_id=719525201]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -290.0
+offset_top = -26.0
+offset_bottom = 26.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_type_variation = &"SuspicionBar"
+step = 5.0
+value = 70.0
+
+[node name="TextureRect2" type="TextureRect" parent="Stats/Suspicion" unique_id=849417834]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -354.0
+offset_top = -50.0
+offset_right = -290.0
+offset_bottom = 50.0
+grow_horizontal = 0
+grow_vertical = 2
+texture = SubResource("AtlasTexture_kwc50")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Hand" type="HBoxContainer" parent="." unique_id=1109914798]
+visible = false
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 2
+
+[node name="Card1" type="TextureRect" parent="Hand" unique_id=1975831961]
+layout_mode = 2
+texture = ExtResource("4_w75iv")
+
+[node name="Card2" type="TextureRect" parent="Hand" unique_id=1286094741]
+layout_mode = 2
+texture = ExtResource("4_w75iv")
+
+[node name="Abilities" type="HBoxContainer" parent="." unique_id=1506935600]
+custom_minimum_size = Vector2(0, 128)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 2
+
+[node name="Distract" type="TextureRect" parent="Abilities" unique_id=1900059474]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+texture = ExtResource("5_o2lis")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="GoldenRake" type="TextureRect" parent="Abilities" unique_id=846745347]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+texture = ExtResource("6_gfles")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="DivineIntervention" type="TextureRect" parent="Abilities" unique_id=1404945601]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+texture = ExtResource("7_aixkq")
+expand_mode = 1
+stretch_mode = 4
