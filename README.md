@@ -41,7 +41,7 @@ District Jam VII game
 	- [ ] table
 	- [ ] simple people
 - UI
-	- [ ] menu screen
+	- [x] menu screen
 	- [ ] pause
 	- [ ] settings
 	- [ ] win / lose
