@@ -8,7 +8,6 @@ var deck: Array[Card]
 
 @onready var players: Array[Node] = get_tree().get_nodes_in_group("NPC")
 
-
 func _ready() -> void:
 	shuffle()
 	deal(2)
@@ -25,11 +24,14 @@ func shuffle() -> void:
 	deck.shuffle()
 
 func deal(num_per_player: int) -> void:
-	for player in players:
-		for i in range(num_per_player):
-			add_child(deck[i])
-			var timer = get_tree().create_timer(0.2)
-			var card_deal: Vector3 = player.global_position - global_position
-			card_deal += Vector3.UP
-			deck[i].apply_central_force(card_deal * randf_range(7, 8))
-			await timer.timeout
+	for i in range(num_per_player * len(players)):
+		add_child(deck[i])
+		deck[i].position.z += 2
+		deck[i].position.y += 1
+		var timer := get_tree().create_timer(0.2)
+		var player_index = i % len(players)
+		var card_deal: Vector3 = players[player_index].global_position - global_position
+		card_deal += Vector3.UP
+		deck[i].apply_central_force(card_deal * randf_range(6, 7))
+		await timer.timeout
+		deck[i].reparent(players[player_index])

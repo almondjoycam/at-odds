@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://ch4ejou0v3ot1"]
+
+[ext_resource type="Theme" uid="uid://u5a6w1fswmu2" path="res://ui/odd_theme.tres" id="1_xmswo"]
+
+[node name="Hud" type="Control" unique_id=2007699849]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_xmswo")
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=435076032]
+layout_mode = 0
+offset_left = 94.0
+offset_top = 72.0
+offset_right = 222.0
+offset_bottom = 113.0
+step = 5.0
+value = 50.0

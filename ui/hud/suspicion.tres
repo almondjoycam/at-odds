@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" format=3 uid="uid://cnoo4fxsr6r0"]
+
+[ext_resource type="Texture2D" uid="uid://dw4x6a6au2mko" path="res://ui/hud/suspicion-belief.png" id="1_khrx4"]
+
+[resource]
+atlas = ExtResource("1_khrx4")
+region = Rect2(20, 139, 484, 121)

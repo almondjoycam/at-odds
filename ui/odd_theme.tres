@@ -1,6 +1,32 @@
 [gd_resource type="Theme" format=3 uid="uid://u5a6w1fswmu2"]
 
 [ext_resource type="FontFile" uid="uid://doroy8n8evmwy" path="res://ui/IosevkaEtoile-Regular.ttc" id="1_0sx86"]
+[ext_resource type="Texture2D" uid="uid://cc5v1yagf1bd6" path="res://ui/hud/belief.tres" id="2_qa2sv"]
+[ext_resource type="Texture2D" uid="uid://cnoo4fxsr6r0" path="res://ui/hud/suspicion.tres" id="3_wy4k1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x7185"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wfg0e"]
+content_margin_top = 16.0
+content_margin_bottom = 16.0
+texture = ExtResource("2_qa2sv")
+texture_margin_left = 128.0
+expand_margin_left = 128.0
+axis_stretch_horizontal = 1
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4lis8"]
+content_margin_top = 16.0
+content_margin_bottom = 16.0
+texture = ExtResource("3_wy4k1")
+texture_margin_left = 128.0
+expand_margin_left = 128.0
+axis_stretch_horizontal = 1
 
 [resource]
 default_font = ExtResource("1_0sx86")
@@ -12,6 +38,9 @@ CodeEdit/fonts/font = ExtResource("1_0sx86")
 ColorPickerButton/fonts/font = ExtResource("1_0sx86")
 FoldableContainer/fonts/font = ExtResource("1_0sx86")
 GraphNodeTitleLabel/fonts/font = ExtResource("1_0sx86")
+HSlider/styles/grabber_area = null
+HSlider/styles/grabber_area_highlight = null
+HSlider/styles/slider = null
 ItemList/fonts/font = ExtResource("1_0sx86")
 Label/fonts/font = ExtResource("1_0sx86")
 LineEdit/fonts/font = ExtResource("1_0sx86")
@@ -21,12 +50,19 @@ MenuButton/fonts/font = ExtResource("1_0sx86")
 OptionButton/fonts/font = ExtResource("1_0sx86")
 PopupMenu/fonts/font = ExtResource("1_0sx86")
 PopupMenu/fonts/font_separator = ExtResource("1_0sx86")
+ProgressBar/colors/font_color = Color(1, 1, 1, 1)
+ProgressBar/colors/font_outline_color = Color(0, 0, 0, 1)
+ProgressBar/constants/outline_size = 8
 ProgressBar/fonts/font = ExtResource("1_0sx86")
+ProgressBar/styles/background = SubResource("StyleBoxFlat_x7185")
+ProgressBar/styles/fill = SubResource("StyleBoxTexture_wfg0e")
 RichTextLabel/fonts/bold_font = ExtResource("1_0sx86")
 RichTextLabel/fonts/bold_italics_font = ExtResource("1_0sx86")
 RichTextLabel/fonts/italics_font = ExtResource("1_0sx86")
 RichTextLabel/fonts/mono_font = ExtResource("1_0sx86")
 RichTextLabel/fonts/normal_font = ExtResource("1_0sx86")
+SuspicionBar/base_type = &"ProgressBar"
+SuspicionBar/styles/fill = SubResource("StyleBoxTexture_4lis8")
 TabBar/fonts/font = ExtResource("1_0sx86")
 TabContainer/fonts/font = ExtResource("1_0sx86")
 TextEdit/fonts/font = ExtResource("1_0sx86")
