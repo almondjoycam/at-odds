@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://na5nkvlpi3wl" path="res://props/table.tscn" id="1_feb5d"]
 [ext_resource type="PackedScene" uid="uid://bwl63tnhbfvnd" path="res://props/chair.tscn" id="2_fc0e3"]
+[ext_resource type="Script" uid="uid://dv34i1jyxmbas" path="res://poker/table.gd" id="2_mfdv2"]
 [ext_resource type="PackedScene" uid="uid://dwjtabu4u2kvo" path="res://props/npc.tscn" id="3_7jktm"]
 [ext_resource type="Script" uid="uid://bstu4mwerqkf7" path="res://player/player.gd" id="4_fc0e3"]
 [ext_resource type="Texture2D" uid="uid://csusakl5t0ail" path="res://poker/cards/card_back.png" id="5_ryrav"]
@@ -36,29 +37,31 @@ environment = SubResource("Environment_ryrav")
 [node name="Set" type="Node3D" parent="." unique_id=1432573322]
 
 [node name="Table" parent="Set" unique_id=1832727909 instance=ExtResource("1_feb5d")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, -0.5, 0)
+script = ExtResource("2_mfdv2")
 
-[node name="Player1" parent="Set" unique_id=68328689 groups=["NPC"] instance=ExtResource("3_7jktm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
+[node name="Egg1" parent="Set" unique_id=68328689 groups=["NPC"] instance=ExtResource("3_7jktm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 0, 0)
 
-[node name="Chair" parent="Set/Player1" unique_id=35847422 instance=ExtResource("2_fc0e3")]
+[node name="Chair" parent="Set/Egg1" unique_id=35847422 instance=ExtResource("2_fc0e3")]
 
-[node name="Player2" parent="Set" unique_id=517466938 groups=["NPC"] instance=ExtResource("3_7jktm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 4)
+[node name="Egg2" parent="Set" unique_id=517466938 groups=["NPC"] instance=ExtResource("3_7jktm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 5)
 
-[node name="Chair" parent="Set/Player2" unique_id=393042296 instance=ExtResource("2_fc0e3")]
+[node name="Chair" parent="Set/Egg2" unique_id=393042296 instance=ExtResource("2_fc0e3")]
 
-[node name="Player3" parent="Set" unique_id=390840901 groups=["NPC"] instance=ExtResource("3_7jktm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 4)
+[node name="Egg3" parent="Set" unique_id=390840901 groups=["NPC"] instance=ExtResource("3_7jktm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 5)
 
-[node name="Chair" parent="Set/Player3" unique_id=1259845108 instance=ExtResource("2_fc0e3")]
+[node name="Chair" parent="Set/Egg3" unique_id=1259845108 instance=ExtResource("2_fc0e3")]
 
-[node name="Player4" parent="Set" unique_id=50357087 groups=["NPC"] instance=ExtResource("3_7jktm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0)
+[node name="Egg4" parent="Set" unique_id=50357087 groups=["NPC"] instance=ExtResource("3_7jktm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 0, 0)
 
-[node name="Chair" parent="Set/Player4" unique_id=703973145 instance=ExtResource("2_fc0e3")]
+[node name="Chair" parent="Set/Egg4" unique_id=703973145 instance=ExtResource("2_fc0e3")]
 
 [node name="DEALER" parent="Set" unique_id=1257434800 instance=ExtResource("3_7jktm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
 script = ExtResource("6_ryrav")
 material = null
 
@@ -71,11 +74,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.51, 2)
 mesh = SubResource("QuadMesh_eow3j")
 surface_material_override/0 = SubResource("StandardMaterial3D_xoatd")
 
-[node name="YOU" type="Node3D" parent="." unique_id=1636203860 groups=["player"]]
+[node name="YOU" type="Node3D" parent="." unique_id=1636203860 node_paths=PackedStringArray("table") groups=["player"]]
 script = ExtResource("4_fc0e3")
+table = NodePath("../Set/Table")
 
 [node name="Camera3D" type="Camera3D" parent="YOU" unique_id=1461095773]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 6, 0.5)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 7, 0.5)
 
 [node name="Hud" parent="." unique_id=2007699849 instance=ExtResource("7_eow3j")]
 mouse_filter = 1

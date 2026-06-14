@@ -1,18 +1,17 @@
 [gd_scene format=3 uid="uid://na5nkvlpi3wl"]
 
 [ext_resource type="PhysicsMaterial" uid="uid://bfevd2f5kmg8t" path="res://props/physics/fabric.tres" id="1_h3d66"]
+[ext_resource type="ArrayMesh" uid="uid://hqaqs6fk8e2k" path="res://props/models/table.res" id="2_p84df"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_w8btp"]
-size = Vector3(8, 1, 5)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_w8btp"]
-size = Vector3(8, 1, 5)
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_p84df"]
+points = PackedVector3Array(-2.1407597, -1, -3.5, -3.0246673, -1, -3.3606763, -2.141, 0.8, -3.5, 2.1397805, -1, -3.5, -3.025, 0.8, -3.361, -3.8214564, -1, -2.9543726, 2.14, 0.8, -3.5, 3.0236883, -1, -3.3606763, -3.821, 0.8, -2.954, -4.453798, -1, -2.321582, 3.024, 0.8, -3.361, 3.8204775, -1, -2.9543726, -4.454, 0.8, -2.322, -4.8600235, -1, -1.5240738, 3.82, 0.8, -2.954, 4.452819, -1, -2.321582, -4.86, 0.8, -1.524, -5, -1, -0.6400888, 4.453, 0.8, -2.322, 4.859045, -1, -1.5240738, -5, 0.8, -0.64, -5, -1, 0.639905, 4.859, 0.8, -1.524, 5, -1, -0.6400888, -5, 0.8, 0.64, -4.8600235, -1, 1.5232038, 5, 0.8, -0.64, 5, -1, 0.639905, -4.86, 0.8, 1.523, -4.453798, -1, 2.320712, 5, 0.8, 0.64, 4.859045, -1, 1.5232038, -4.454, 0.8, 2.321, -3.8214564, -1, 2.9535027, 4.859, 0.8, 1.523, 4.452819, -1, 2.320712, -3.821, 0.8, 2.954, -3.0246673, -1, 3.3598065, 4.453, 0.8, 2.321, 3.8204775, -1, 2.9535027, -3.025, 0.8, 3.36, -2.1407597, -1, 3.4998164, 3.82, 0.8, 2.954, 3.0236883, -1, 3.3598065, 0, 0.8, 3.5, 1.45, 0.8, 3.511, 3.024, 0.8, 3.36, 2.1397805, -1, 3.4998164)
 
 [node name="Table" type="StaticBody3D" unique_id=1863985010]
 physics_material_override = ExtResource("1_h3d66")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=251089762]
-mesh = SubResource("BoxMesh_w8btp")
+transform = Transform3D(0.99999994, 0.000306575, -0.00012345474, -0.0003064853, 0.9999997, 0.00065432664, 0.00012367721, -0.0006542846, 0.99999976, 0, 0, 0)
+mesh = ExtResource("2_p84df")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1147041822]
-shape = SubResource("BoxShape3D_w8btp")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1688810319]
+shape = SubResource("ConvexPolygonShape3D_p84df")
